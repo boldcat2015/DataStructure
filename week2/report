@@ -1,0 +1,18 @@
+REPORT
+
+2016.03.07
+程雨歌 12307110079
+
+merge:
+从头依次将nums2的元素插入第一个比他大的nums1的元素之前，
+并在每次插入以后后移nums1的插入点之后部分。
+
+时间复杂度：O(m * n)
+
+(Note: 若可以调用RandQuickSort，则直接将nums2贴到nums1后排序，复杂度为O((m+n)log(m+n))。)
+
+removeNthFromEnd:
+先求出链表长度len，
+然后直接删除正数第len - n + 1个元素。
+
+时间复杂度：O(len)
