@@ -1,0 +1,108 @@
+\documentclass{homework}
+\usepackage{homework}
+\title{report}
+\subtitle{week 4}
+\begin{document}
+
+\maketitle
+\section{reverseList.c}
+\subsection{函数说明}
+\paragraph{输入}
+指向一个链表头指针的指针。
+\paragraph{输出}
+无输出，将指向的链表反向。
+\paragraph{实现方法}
+现将链表头指向NULL，然后从原链表头节点开始，依次将节点运用{\bf 头插法}插入head，直到链表结束即可。
+
+每一次插入的具体步骤为：
+\begin{enumerate}
+    \item 记录待插入节点p的下一节点t；
+    \item 将待插入节点p的next指针指向当前的头节点head的下一节点；（此时已插入该节点p）
+    \item 将头节点head指向刚刚插入的节点p；
+    \item 将之前记录的下一节点t设为待插入节点p
+\end{enumerate}
+\subsection{复杂度}
+\paragraph{时间复杂度}
+$\mathcal{O}(n)$
+\paragraph{空间复杂度}
+$\mathcal{O}(1)$
+\subsection{边界情况}
+当链表为空时，不进入头插法循环，故直接返回head；
+
+当链表只有一个节点时，先将头节点指向NULL，再将该节点指向头节点的next（即NULL），然后头节点指向该节点；
+\subsection{程序运行结果}
+\begin{lstlisting}[numbers=none]
+Case 1: 
+The original linked list:
+null
+The reversed linked list:
+null
+
+Case 2: 
+The original linked list:
+44  
+The reversed linked list:
+44  
+
+Case 3: 
+The original linked list:
+58->30  
+The reversed linked list:
+30->58  
+
+Case 4: 
+The original linked list:
+45->10->14->2->97->2->79->98  
+The reversed linked list:
+98->79->2->97->2->14->10->45
+
+sh: pause: command not found
+\end{lstlisting}
+\section{isPalindrome.c}
+\subsection{函数说明}
+\paragraph{输入}
+指向一个链表头指针的指针。
+\paragraph{输出}
+一个布尔值，即该链表是否为回文串。
+\paragraph{实现方法}
+\begin{enumerate}
+    \item 先用半速移动法标记链表的中点节点；
+    \item 将链表截断，并将后半截链表反向（运用第一题的方法）；
+    \item 依次对比两个半链表，若直到短的结束两者都完全一致，则返回true；否则返回false。
+\end{enumerate}
+\subsection{复杂度}
+\paragraph{时间复杂度}
+$\mathcal{O}(n)$
+\paragraph{空间复杂度}
+$\mathcal{O}(1)$
+\subsection{边界情况}
+若输入为空链表，两个头节点的next都为NULL，第三步中不进行比较，返回true。
+
+若输入为奇数长度的回文串，中间节点被分在（反向后的）后半截链表的末尾，因此在进行比较时当在前半截链表上的t到达末尾，比较结束，无需比较中间节点，也不会出现调用空节点数值。
+
+注意，在对后半截链表进行反转前，新声明了一个无意义的节点，以符合头节点的新约定。
+\subsection{程序运行结果}
+\begin{lstlisting}[numbers=none]
+11->19->29->34->16->98->48->48->98->16->34->29->19->11  
+Your judgement: True
+Correct!
+
+Start testing...
+
+Your code runs well!
+
+sh: pause: command not found
+\end{lstlisting}
+\section{Argue}
+助教您好！
+
+第一周作业我的评分为{\color{red}\bf A-}。附注为：“没有考虑numsSize = 0的情况”，这也许与实际情况不相符。
+
+不知道能否请您重新评估我的成绩？
+
+我虽然没有做专门的条件判断，但其实是考虑到的，当numsSize = 0时，函数所有循环都不会进行，自然结果就是返回默认值false（containsDuplicate）或不进行任何操作（moveZeroes）。您可以查看当时我提交到邮箱里的代码，或者审阅我复制到文末的当时的代码。
+
+抱歉给您添麻烦了！谢谢！
+\lstinputlisting[language=C,caption=containsDuplicate.c]{../week1/containsDuplicate.c}
+\lstinputlisting[language=C,caption=moveZeroes.c]{../week1/moveZeroes.c}
+\end{document}
