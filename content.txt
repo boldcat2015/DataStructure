@@ -1,0 +1,43 @@
+Content
+
+week1:
+    containsDuplicate: 判断数组是否有重复数字。
+    moveZeroes: 将数组中0全部移到最后。
+
+week2:
+    merge: 将两个有序数组合并为一个有序数组。
+    removeNthFromEnd: 删除链表倒数第N个结点。
+
+week3:
+    getIntersectionNode: 寻找两个链表交汇的结点。
+    isValid: 判断文本中括号匹配是否合法。
+
+week4:
+    isPalindrome: 判断链表是否为回文链。
+    reverseList: 将链表反向。
+
+week5:
+    evalRPN: 按逆波兰表示法计算表达式结果。
+    myAtoi: 将字符串转换为整数。
+
+week7:
+    lengthOfLastWord: 求最后一个单词长度。
+    wordPattern: 判断单词串是否匹配给定模式。
+
+week8:
+    sparseMatrixMultiplication: 按三元组表示法实现对稀疏矩阵的：
+        由传统矩阵创建，
+        寻找指定数值所在坐标，
+        矩阵乘法。
+
+week9:
+    treeBasic:
+        由数组创建二叉查找树，
+        打印树。
+
+projectA:
+    1. 将文章中所有单词按字典序整理，并将字符进行Huffman编码。
+    2. 分别用堆和多链表维护先来后到不同级别的病人的优先队列。
+    3. 根据先序遍历和中序遍历重构树，输出镜像树的后序遍历和双孩子结点数。
+    4. 实现高精度数字的加、减、乘、幂运算。
+

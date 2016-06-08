@@ -1,0 +1,8 @@
+enqueue, Aka, 1001, 2
+enqueue, Bob, 1002, 4
+enqueue, Cal, 1003, 1
+quit, 1003
+enqueue, Doh, 1004, 1
+update, 1004, 3
+dequeue
+print
